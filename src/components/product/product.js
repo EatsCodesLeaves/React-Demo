@@ -76,10 +76,10 @@ export default class Product extends Component {
             let currentProduct = this.props.productslist.find(checkId);
             return (
                 <div className="details">
-                    {/* <h2>{ currentProduct.name } Details</h2>
+                    <h2>{ currentProduct.name } Details</h2>
                     <div className="item-thumb-container">
                         <img className="item-thumbnail" src={ currentProduct.img } alt="thumbnail"/>
-                    </div> */}
+                    </div>
                     <div>
                         <span>id: </span>{ this.props.match.params.id }
                     </div>

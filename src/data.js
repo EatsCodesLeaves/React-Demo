@@ -42,7 +42,7 @@ export const productlist = [
         price: 100
     },
     {
-        id: 9,
+        id: 8,
         name: 'ProductEight',
         img: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
         price: 100
