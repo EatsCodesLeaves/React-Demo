@@ -7,7 +7,7 @@ export default class Products extends Component {
     render () {
         const products = this.props.productslist.map((product) => 
         <div className="item">
-            <Link to={"/detail/" + product._id} onSubmit={this.handleSubmit}>
+            <Link to={"/detail/" + product._id}>
                 <div className="item-thumb-container">
                     <img className="item-thumbnail" src={product.img} alt="thumbnail"/>
                 </div>

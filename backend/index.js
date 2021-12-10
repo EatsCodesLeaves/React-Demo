@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use("/", router);
 
 
-router.route("/getData").get(function(req, res) {
+router.get("/getData", function(req, res) {
   item.find({}, function(error, result) {
     if (error) {
       res.send(error);
@@ -32,7 +32,7 @@ router.route("/getData").get(function(req, res) {
   });
 });
 
-router.route("/addData").post(function(req, res) {
+router.post("/addData", function(req, res) {
   item.create(req.body, (error, specs) => {
     if (error) {
       console.log(error);
@@ -43,7 +43,7 @@ router.route("/addData").post(function(req, res) {
   })
 });
 
-router.route("/setData/:id").put(function(req, res) {
+router.put("/setData/:id", function(req, res) {
   console.log(`setting name to: ${req.body.newName}`);
   item.findOneAndUpdate({ _id: req.params.id }, { name: req.body.newName }, {new: true}, function (error, foundItem) {
     if (error) {
@@ -56,7 +56,7 @@ router.route("/setData/:id").put(function(req, res) {
   })
 });
 
-router.route("/delData/:id").delete(function(req, res) {
+router.delete("/delData/:id", function(req, res) {
   console.log(`deleting product with the id: ${req.params.id}`);
   item.remove({ _id: req.params.id }, function (error, foundItem) {
     if (error) {
